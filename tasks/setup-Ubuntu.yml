@@ -1,0 +1,9 @@
+---
+- name: Copy CUDA installer to remote server
+  copy: "src={{ cuda_installer.deb }} dest={{ cuda_installer.remote_deb }} mode=0755"
+
+- name: Install CUDA repo
+  apt: "deb={{ cuda_installer.remote_deb }}"
+
+- name: Install CUDA
+  apt: "name=cuda state=present update_cache=yes"

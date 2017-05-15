@@ -1,0 +1,16 @@
+---
+cuda_download_url_map:
+  trusty:
+    v8.0:
+      url: https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1404-8-0-local-ga2_8.0.61-1_amd64-deb
+      deb: cuda-repo-ubuntu1404-8-0-local-ga2_8.0.61-1_amd64.deb
+      remote_deb: /tmp/cuda-repo-ubuntu1404-8-0-local-ga2_8.0.61-1_amd64.deb
+  xenial:
+    v8.0:
+      url: https://developer.nvidia.com/compute/cuda/8.0/Prod2/local_installers/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64-deb
+      deb: cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+      remote_deb: /tmp/cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+
+cuda_installer: "{{ cuda_download_url_map[ansible_distribution_release][cuda_version_str] }}"
+
+cuda_home: /usr/local/cuda
