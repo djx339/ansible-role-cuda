@@ -6,7 +6,7 @@ Install [NVIDIA CUDA](https://developer.nvidia.com/cuda-toolkit) on Linux System
 Requirements
 ------------
 
-None.
+Download the [CUDA Toolkit installer deb/rpm(local)](https://developer.nvidia.com/cuda-downloads) to [`files`](files) folder.
 
 Role Variables
 --------------
